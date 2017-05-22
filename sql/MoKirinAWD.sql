@@ -17,7 +17,8 @@ CREATE TABLE `user` (
   `password` varchar(32) NOT NULL,
   `token` varchar(32) NOT NULL,
   PRIMARY KEY (`team_id`),
-  UNIQUE KEY `team_name` (`team_name`)
+  UNIQUE KEY `team_name` (`team_name`),
+  UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 
