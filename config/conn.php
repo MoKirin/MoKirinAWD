@@ -1,5 +1,5 @@
 <?php
-include_once("./config.php");
+require dirname(__file__)."/config.php";
 $dsn = DBMS.":host=".DB_HOST.";dbname=".DB_NAME;
 try{
     $pdo = new PDO($dsn,DB_USER,DB_PASS);
@@ -12,4 +12,3 @@ try{
 }catch(PDOException $e){
     die("[!] Error: ".$e->getMessage()."<br/>");
 }
-?>
