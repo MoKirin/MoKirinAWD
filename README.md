@@ -18,17 +18,12 @@
 
 ```
 MoKirinAWD
-├── conf
+├── assets
+├── config
 │   ├── config.php
 │   └── conn.php
+├── framework
 ├── manage
-│   ├── assets
-│   ├── controllers
-│   ├── index.php
-│   ├── models
-│   └── views
-├── user
-│   ├── assets
 │   ├── controllers
 │   ├── index.php
 │   ├── models
@@ -36,17 +31,22 @@ MoKirinAWD
 ├── sql
 │   ├── MoKirinAWD.sql
 │   └── MoKirinAWD.xmind
+├── user
+│   ├── controllers
+│   ├── index.php
+│   ├── models
+│   └── views
 └── index.php
 ```
 
 下面做几个约定：
 
 1. 文件目录结构如上面所示，因为考虑到可以把管理系统 (manage)和用户系统 (user)分开部署，所以分两大个模块。配置文件 (conf)和数据库初始化文件 (sql)都放根目录。
-2. 数据库表名用<font color="#953734">小写</font>或者<font color="#953734">小写加下划线</font>，如：`user`,`awd_user`
-3. 模块名 (Models)用<font color="#953734">大驼峰命名法</font>，即首字母<font color="#953734">大写</font>，并在名称后添加**Model**，如：`UserModel.php`
-4. 控制器 (Controllers)用<font color="#953734">大驼峰命名法</font>，即<font color="#953734">首字母大写</font>，并在名称后添加**Controller**，如：`UserController.php`
-5. 方法名 (Action)用<font color="#953734">小驼峰命名法</font>，即<font color="#953734">首字母小写</font>，如：`index`，`indexPost`
-6. 视图 (Views)部署结构为<font color="#953734">控制其名/行为名</font>，如：`user/add.php`
+2. 数据库表名用**小写**或者**小写加下划线**，如：`user`,`awd_user`
+3. 模块名 (Models)用**大驼峰命名法**，即首字母**大写**，并在名称后添加**Model**，如：`UserModel.php`
+4. 控制器 (Controllers)用**大驼峰命名法**，即**首字母大写**，并在名称后添加**Controller**，如：`UserController.php`
+5. 方法名 (Action)用**小驼峰命名法**，即**首字母小写**，如：`index`，`indexPost`
+6. 视图 (Views)部署结构为**控制其名/行为名**，如：`user/add.php`
 
 
 
